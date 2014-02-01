@@ -1202,7 +1202,11 @@ ul.custom.dashed > li:before {
 }
 
 .Progress.rounded .Progress__bar,
-.Progress.rounded .Progress__done,
+.Progress.rounded .Progress__done {
+  border-radius: 1em;
+  min-width: 1em;
+}
+
 .Progress.rounded.animated .Progress__done:before {
   border-radius: 1em;
   min-width: 1em;
