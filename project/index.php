@@ -26,30 +26,19 @@
 	<div class="Page__content">
 		<h1>Блоки Фундамента</h1>
 
-		<p><strong>Далеко-далеко</strong> за <em>словесными горами</em> в стране, <sup>гласных</sup> и <sub>согласных</sub> живут	<big>рыбные</big> <small>тексты</small>.</p>
+		<h2>Вторичное</h2>
 
-		<h2>Подзаголовок, например</h2>
+		<h3>Троечник!</h3>
 
-		<p class="TextFade">Длинный текст о многом, плавно скрывающийся при помощи современных технологий.</p>
+		<h4>Четвёртован</h4>
 
-		<p class="Ellipsify"><span class="Ellipsify__text">Эксикатор разрушаем. Заиливание волнообразно. Очевидно, что надолба перемещает легкосуглинистый бур, вне зависимости от предсказаний теоретической модели явления. Латерит, как следует из полевых и лабораторных наблюдений, восстанавливает пахотный чернозём одинаково по всем направлениям.</span></p>
+		<h5>Пятёрочка</h5>
 
-		<p>
-			<span class="c-info">Информация</span>,
-			<span class="c-error">Ошибка</span>,
-			<span class="c-success">Успех</span>
-		</p>
+		<h6>Шерсть</h6>
+
+		<p><strong>Далеко-далеко</strong> за <em>словесными горами</em> в стране, <sup>гласных</sup> и <sub>согласных</sub> живут	<big>рыбные</big> <small>тексты</small>. <mark>Всё</mark> <q>это</q> — <abbr class="textUppercase" title="Язык ГиперТекстовой Разметки">ЯГТР</abbr>.</p>
 
 		<p><a href="#">Ссылка</a>, <span class="pseudoLink">псевдоссылка</span></p>
-
-		<div class="PseudoTable m-b-1">
-			<div class="PseudoTable__cell">
-				<img src="http://placedog.com/50/50" style="margin-right: 1em;">
-			</div>
-			<div class="PseudoTable__cell">
-				Няшная картинка клёвой собаченьки
-			</div>
-		</div>
 
 		<ul>
 			<li>Раз</li>
@@ -83,9 +72,32 @@
 			</li><li class="List__item last">Три</li>
 		</ul>
 
+		<hr>
+
+		<h2>Подзаголовок, например</h2>
+
+		<p class="TextFade">Длинный текст о многом, плавно скрывающийся при помощи современных технологий.</p>
+
+		<p class="Ellipsify"><span class="Ellipsify__text">Эксикатор разрушаем. Заиливание волнообразно. Очевидно, что надолба перемещает легкосуглинистый бур, вне зависимости от предсказаний теоретической модели явления. Латерит, как следует из полевых и лабораторных наблюдений, восстанавливает пахотный чернозём одинаково по всем направлениям.</span></p>
+
+		<p>
+			<span class="c-info">Информация</span>,
+			<span class="c-error">Ошибка</span>,
+			<span class="c-success">Успех</span>
+		</p>
+
+		<div class="PseudoTable m-b-1">
+			<div class="PseudoTable__cell">
+				<img src="http://placedog.com/50/50" style="margin-right: 1em;">
+			</div>
+			<div class="PseudoTable__cell">
+				Няшная картинка клёвой собаченьки
+			</div>
+		</div>
+
 		<form action="" class="Form Form--complex m-b-1">
 			<input type="text" name="" id="" class="Form__object--fillspace">
-			<button class="BtnDefault Form__object--fillspace-gap">Найти</button>
+			<button class="Btn--default Form__object--fillspace-gap">Найти</button>
 		</form>
 
 		<form action="" class="Form Form--complex m-b-1 w-full">
@@ -93,7 +105,7 @@
 				<input type="text" name="" id="" class="w-full">
 			</div>
 			<div class="PseudoTable__cell">
-				<button class="BtnDefault m-l-space">Найти</button>
+				<button class="Btn--default m-l-space">Найти</button>
 			</div>
 		</form>
 
@@ -165,7 +177,7 @@
 		</div>
 
 		<p>
-			<a href="#" class="TipHolder" data-cont="Звонок платный">+7 495 212-85-06</a>
+			<a href="#" class="TipHolder top" data-cont="Звонок платный">+7 495 212-85-06</a>
 		</p>
 
 		<p>
@@ -190,6 +202,21 @@
 				<span class="BadgeTail"></span><span class="BadgeText">Акция</span>
 			</span>
 			<a href="#" class="Badge BadgeOutline planet textUppercase">ОП</a>
+		</p>
+		<p>
+			120<span class="Rub"> руб.</span>
+		</p>
+
+		<p>
+			<span class="Btn--default">Вариант</span>
+		</p>
+
+		<p>
+			<span class="Btn--default Btn--group Btn--active">Вариант</span><span class="Btn--default Btn--group">Опциональность</span><span class="Btn--default Btn--group">Вариативность</span>
+		</p>
+
+		<p>
+			<span class="Spinner"></span> Загрузка
 		</p>
 	</div>
 
