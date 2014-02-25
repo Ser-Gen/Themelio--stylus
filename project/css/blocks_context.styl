@@ -113,7 +113,6 @@ btnDefault-bdrad = 4px
 
 
 
-
 .Header {
 	font-weight: bold;
 		
@@ -128,21 +127,20 @@ btnDefault-bdrad = 4px
 	}
 }
 
-
-Header(main, error) {
+Header(mods) {
 	@extend .Header;
-	if main == 'main' {
+	if (match('main', mods)) {
 		@extend .Header--main;
 	}
-	if error == 'error' {
+	if (match('error', mods)) {
 		@extend .Header--type-error;
 	}
-	if main == 'main' && error == 'error' {
+	if (match('main', mods) && match('error', mods)) {
 		@extend .Header--main.Header--type-error;
 	}
 }
 
 
 .Error__header {
-	Header('main', 'error');
+	Header('main error');
 }
