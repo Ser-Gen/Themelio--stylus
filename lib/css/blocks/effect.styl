@@ -10,21 +10,21 @@
 */
 
 .FadeIn {
-  display: block;
-  opacity: 0;
-  visibility: hidden;
+	display: block;
+	opacity: 0;
+	visibility: hidden;
 
-  /* хром плохо анимирует текст элемента, если он не в отдельном слое */
-  transform: translateZ(0);
-  
-  /* анимируем с появлением */
-  transition:
-    opacity .1s ease-in-out,
-    visibility .1s linear;
+	/* хром плохо анимирует текст элемента, если он не в отдельном слое */
+	transform: translateZ(0);
+	
+	/* анимируем с появлением */
+	transition:
+		opacity .1s ease-in-out,
+		visibility .1s linear;
 }
 
 .FadeIn--active {
-  opacity: 1;
-  visibility: visible;
-  transition-duration: .05s;
+	opacity: 1;
+	visibility: visible;
+	transition-duration: .05s;
 }

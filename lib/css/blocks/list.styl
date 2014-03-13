@@ -2,92 +2,92 @@
 ---------------------------------------------------------------------*/
 
 ul.custom {
-  list-style-type: none;
-  
-  & > li:before {
-    cursor: default;
-    margin-right: .35em;
-    position: absolute;
-    right: 100%;
-    top: 0;
-  }
-  &.inside > li:before {
-    position: static;
-  }
+	list-style-type: none;
+	
+	& > li:before {
+		cursor: default;
+		margin-right: .35em;
+		position: absolute;
+		right: 100%;
+		top: 0;
+	}
+	&.inside > li:before {
+		position: static;
+	}
 
-  &.dashed > li:before {
-    content: '\2014';
-    margin-right: .5em;
-  }
+	&.dashed > li:before {
+		content: '\2014';
+		margin-right: .5em;
+	}
 }
 ul:lang(ru) {
-  @extend ul.custom;
-  
-  & > li:before {
-    @extend ul.custom > li:before;
-    @extend ul.custom.dashed > li:before;
-  }
+	@extend ul.custom;
+	
+	& > li:before {
+		@extend ul.custom > li:before;
+		@extend ul.custom.dashed > li:before;
+	}
 }
 
 
 /*
 <ul class="List">
-  <li class="List__item">Пункт меню, например</li>
+	<li class="List__item">Пункт меню, например</li>
 </ul>
 */
 
 .List {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 .List__item {
-  margin: 0;
-  
-  &:before {
-    display: none;
-  }
+	margin: 0;
+	
+	&:before {
+		display: none;
+	}
 }
 .ielte7 .List.ib .List__item {
-  display: inline;
-  zoom: 1;
+	display: inline;
+	zoom: 1;
 }
 
 .List.ib {
-  & .List__item {
-    display: inline-block;
-  }
+	& .List__item {
+		display: inline-block;
+	}
 }
 
 .List.ib.justify {
-  text-align: justify;
-  
-  &:after {
-    content: "";
-    display: inline-block;
-    height: 1px;
-    width: 100%;
-  }
-  
-  & .List__item {
-    text-align: left;
-  }
+	text-align: justify;
+	
+	&:after {
+		content: "";
+		display: inline-block;
+		height: 1px;
+		width: 100%;
+	}
+	
+	& .List__item {
+		text-align: left;
+	}
 }
 
 .List.ib.separated {
-  
-  & .List__item {
-    
-    &:after {
-      content: "|";
-      cursor: default;
-      margin-left: .45em;
-      margin-right: .75em;
-      opacity: .75;
-    }
-    &.last:after {
-      content: none;
-    }
-  }
+	
+	& .List__item {
+		
+		&:after {
+			content: "|";
+			cursor: default;
+			margin-left: .45em;
+			margin-right: .75em;
+			opacity: .75;
+		}
+		&.last:after {
+			content: none;
+		}
+	}
 }

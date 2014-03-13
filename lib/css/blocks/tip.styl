@@ -31,72 +31,72 @@ Tip_ArrowSize = 6px;
 
 .Tip,
 .TipHolder:before {
-  display: inline-block;
-  text-decoration: none;
-  white-space: pre;
+	display: inline-block;
+	text-decoration: none;
+	white-space: pre;
 }
 
 .Tip,
 .TipHolder {
-  position: relative;
+	position: relative;
 }
 
 .TipHolder:before {
-  content: attr(data-cont);
-  cursor: default;
+	content: attr(data-cont);
+	cursor: default;
 }
 
 .TipHolder:before,
 .TipHolder:after {
-  visibility: hidden;
+	visibility: hidden;
 }
 
 .TipHolder:hover:before,
 .TipHolder:hover:after {
-  visibility: visible;
+	visibility: visible;
 }
 
 .TipHolder.fade:before,
 .TipHolder.fade:after {
-  opacity: 0;
-  
-  transition:
-    opacity .1s ease-in-out .05s,
-    visibility .1s linear .05s;
+	opacity: 0;
+	
+	transition:
+		opacity .1s ease-in-out .05s,
+		visibility .1s linear .05s;
 }
 .TipHolder.fade:hover:before,
 .TipHolder.fade:hover:after {
-  opacity: 1;
-  transition-duration: .05s;
+	opacity: 1;
+	transition-duration: .05s;
 }
 
 .Tip,
 .TipHolder:before {
-  background: Tip_BG;
-  border-radius: .5em;
-  box-shadow: 0 .2em .3em rgba(0,0,0,.4);
-  color: Tip_Color;
-  
-  /* нельзя использовать относительные величины из-за Хрома */
-  /* ну и ладно */
-  padding: .5em .75em;
+	background: Tip_BG;
+	border-radius: .5em;
+	box-shadow: 0 .2em .3em rgba(0,0,0,.4);
+	color: Tip_Color;
+	
+	/* нельзя использовать относительные величины из-за Хрома */
+	/* ну и ладно */
+	padding: .5em .75em;
 }
 .Tip:after,
 .TipHolder:after {
-  color: Tip_BG;
+	color: Tip_BG;
 }
 
 .Tip:after,
 .TipHolder:after {
-  content: "";
-  height: 0;
-  width: 0;
+	content: "";
+	height: 0;
+	width: 0;
 }
 
 .Tip:after,
 .TipHolder:before,
 .TipHolder:after {
-  position: absolute;
+	position: absolute;
 }
 
 
@@ -106,42 +106,42 @@ Tip_ArrowSize = 6px;
 .Tip.bottom:after,
 .TipHolder.bottom:before,
 .TipHolder.bottom:after {
-  left: 50%;
-  transform: translateX(-50%);
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .TipHolder.top:before,
 .TipHolder.top:after {
-  bottom: 100%;
+	bottom: 100%;
 }
 .Tip.top:after,
 .TipHolder.top:after {
-  border-top: Tip_ArrowSize solid;
-  border-left: Tip_ArrowSize solid transparent;
-  border-right: Tip_ArrowSize solid transparent;
+	border-top: Tip_ArrowSize solid;
+	border-left: Tip_ArrowSize solid transparent;
+	border-right: Tip_ArrowSize solid transparent;
 }
 .Tip.top:after {
-  bottom: -(Tip_ArrowSize);
+	bottom: -(Tip_ArrowSize);
 }
 .TipHolder.top:before {
-  margin-bottom: (Tip_ArrowSize - 1px);
+	margin-bottom: (Tip_ArrowSize - 1px);
 }
 
 .TipHolder.bottom:before,
 .TipHolder.bottom:after {
-  top: 100%;
+	top: 100%;
 }
 .Tip.bottom:after,
 .TipHolder.bottom:after {
-  border-bottom: Tip_ArrowSize solid;
-  border-left: Tip_ArrowSize solid transparent;
-  border-right: Tip_ArrowSize solid transparent;
+	border-bottom: Tip_ArrowSize solid;
+	border-left: Tip_ArrowSize solid transparent;
+	border-right: Tip_ArrowSize solid transparent;
 }
 .Tip.bottom:after {
-  top: -(Tip_ArrowSize);
+	top: -(Tip_ArrowSize);
 }
 .TipHolder.bottom:before {
-  margin-top: (Tip_ArrowSize - 1px);
+	margin-top: (Tip_ArrowSize - 1px);
 }
 
 
@@ -151,40 +151,40 @@ Tip_ArrowSize = 6px;
 .Tip.right:after,
 .TipHolder.right:before,
 .TipHolder.right:after {
-  top: 50%;
-  transform: translateY(-50%);
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .TipHolder.left:before,
 .TipHolder.left:after {
-  right: 100%;
+	right: 100%;
 }
 .Tip.left:after,
 .TipHolder.left:after {
-  border-left: Tip_ArrowSize solid;
-  border-top: Tip_ArrowSize solid transparent;
-  border-bottom: Tip_ArrowSize solid transparent;
+	border-left: Tip_ArrowSize solid;
+	border-top: Tip_ArrowSize solid transparent;
+	border-bottom: Tip_ArrowSize solid transparent;
 }
 .Tip.left:after {
-  right: -(Tip_ArrowSize);
+	right: -(Tip_ArrowSize);
 }
 .TipHolder.left:before {
-  margin-right: (Tip_ArrowSize - 1px);
+	margin-right: (Tip_ArrowSize - 1px);
 }
 
 .TipHolder.right:before,
 .TipHolder.right:after {
-  left: 100%;
+	left: 100%;
 }
 .Tip.right:after,
 .TipHolder.right:after {
-  border-right: Tip_ArrowSize solid;
-  border-top: Tip_ArrowSize solid transparent;
-  border-bottom: Tip_ArrowSize solid transparent;
+	border-right: Tip_ArrowSize solid;
+	border-top: Tip_ArrowSize solid transparent;
+	border-bottom: Tip_ArrowSize solid transparent;
 }
 .Tip.right:after {
-  left: -(Tip_ArrowSize);
+	left: -(Tip_ArrowSize);
 }
 .TipHolder.right:before {
-  margin-left: (Tip_ArrowSize - 1px);
+	margin-left: (Tip_ArrowSize - 1px);
 }

@@ -1,5 +1,5 @@
-/* Modernizr 2.7.0 (Custom Build) | MIT & BSD
- * Build: http://modernizr.com/download/#-shiv-cssclasses-testprop-testallprops-prefixes-domprefixes-cssclassprefix:has!
+/* Modernizr 2.7.1 (Custom Build) | MIT & BSD
+ * Build: http://modernizr.com/download/#-shiv-cssclasses-cssclassprefix:has!
  */
 ;
 
@@ -7,7 +7,7 @@
 
 window.Modernizr = (function( window, document, undefined ) {
 
-    var version = '2.7.0',
+    var version = '2.7.1',
 
     Modernizr = {},
 
@@ -22,20 +22,7 @@ window.Modernizr = (function( window, document, undefined ) {
     inputElem  ,
 
 
-    toString = {}.toString,
-
-    prefixes = ' -webkit- -moz- -o- -ms- '.split(' '),
-
-
-
-    omPrefixes = 'Webkit Moz O ms',
-
-    cssomPrefixes = omPrefixes.split(' '),
-
-    domPrefixes = omPrefixes.toLowerCase().split(' '),
-
-
-    tests = {},
+    toString = {}.toString,    tests = {},
     inputs = {},
     attrs = {},
 
@@ -119,15 +106,6 @@ window.Modernizr = (function( window, document, undefined ) {
         return !!~('' + str).indexOf(substr);
     }
 
-    function testProps( props, prefixed ) {
-        for ( var i in props ) {
-            var prop = props[i];
-            if ( !contains(prop, "-") && mStyle[prop] !== undefined ) {
-                return prefixed == 'pfx' ? prop : true;
-            }
-        }
-        return false;
-    }
 
     function testDOMProps( props, obj, elem ) {
         for ( var i in props ) {
@@ -145,20 +123,7 @@ window.Modernizr = (function( window, document, undefined ) {
         }
         return false;
     }
-
-    function testPropsAll( prop, prefixed, elem ) {
-
-        var ucProp  = prop.charAt(0).toUpperCase() + prop.slice(1),
-            props   = (prop + ' ' + cssomPrefixes.join(ucProp + ' ') + ucProp).split(' ');
-
-            if(is(prefixed, "string") || is(prefixed, "undefined")) {
-          return testProps(props, prefixed);
-
-            } else {
-          props = (prop + ' ' + (domPrefixes).join(ucProp + ' ') + ucProp).split(' ');
-          return testDOMProps(props, prefixed, elem);
-        }
-    }    for ( var feature in tests ) {
+    for ( var feature in tests ) {
         if ( hasOwnProp(tests, feature) ) {
                                     featureName  = feature.toLowerCase();
             Modernizr[featureName] = tests[feature]();
@@ -381,18 +346,6 @@ window.Modernizr = (function( window, document, undefined ) {
     }(this, document));
 
     Modernizr._version      = version;
-
-    Modernizr._prefixes     = prefixes;
-    Modernizr._domPrefixes  = domPrefixes;
-    Modernizr._cssomPrefixes  = cssomPrefixes;
-
-
-
-    Modernizr.testProp      = function(prop){
-        return testProps([prop]);
-    };
-
-    Modernizr.testAllProps  = testPropsAll;
 
     docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') +
 

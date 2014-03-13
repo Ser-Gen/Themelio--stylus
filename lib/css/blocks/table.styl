@@ -11,41 +11,41 @@
 
 ```html
 <div class="PseudoTable w-full">
-  <div class="PseudoTable__cell">
-    <a href="#" class="btn Btn--default btnGreen">Создать акцию</a>
-  </div>
-  <div class="PseudoTable__cell t-a-r">
-    <a href="#" class="t-d-n"><i class="icon sort"></i>Изменить порядок отображения</a>
-  </div>
+	<div class="PseudoTable__cell">
+		<a href="#" class="btn Btn--default btnGreen">Создать акцию</a>
+	</div>
+	<div class="PseudoTable__cell t-a-r">
+		<a href="#" class="t-d-n"><i class="icon sort"></i>Изменить порядок отображения</a>
+	</div>
 </div>
 ```
 
 Так же реализуется картинка с подписью (для анонсов)
 
 <div class="PseudoTable">
-  <div class="PseudoTable__cell">
-    <img src="http://placedog.com/35/35" style="margin-right: 1em;">
-  </div>
-  <div class="PseudoTable__cell">
-    Няшная картинка клёвой собаченьки
-  </div>
+	<div class="PseudoTable__cell">
+		<img src="http://placedog.com/35/35" style="margin-right: 1em;">
+	</div>
+	<div class="PseudoTable__cell">
+		Няшная картинка клёвой собаченьки
+	</div>
 </div>
 */
 
 .PseudoTable,
 .PseudoTable__row,
 .PseudoTable__cell {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 .PseudoTable {
-  display: table;
+	display: table;
 }
 .PseudoTable__row {
-  display: table-row;
+	display: table-row;
 }
 .PseudoTable__cell {
-  display: table-cell;
-  vertical-align: middle;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 
@@ -59,17 +59,17 @@
 
 ```html
 <a>
-  <span class="PseudoCol name">Имя</span>
-  <span class="PseudoCol age">Возраст</span>
-  <span class="PseudoCol weight">Вес</span>
+	<span class="PseudoCol name">Имя</span>
+	<span class="PseudoCol age">Возраст</span>
+	<span class="PseudoCol weight">Вес</span>
 </a>
 ```
 */
 
 .PseudoCol {
-  box-sizing: border-box;
-  display: inline-block;
-  padding: .75em .375em;
-  vertical-align: middle;
-  word-wrap: break-word;
+	box-sizing: border-box;
+	display: inline-block;
+	padding: .75em .375em;
+	vertical-align: middle;
+	word-wrap: break-word;
 }
