@@ -20,6 +20,14 @@ ul.custom {
     margin-right: .5em;
   }
 }
+ul:lang(ru) {
+  @extend ul.custom;
+  
+  & > li:before {
+    @extend ul.custom > li:before;
+    @extend ul.custom.dashed > li:before;
+  }
+}
 
 
 /*
@@ -36,6 +44,10 @@ ul.custom {
 
 .List__item {
   margin: 0;
+  
+  &:before {
+    display: none;
+  }
 }
 .ielte7 .List.ib .List__item {
   display: inline;
