@@ -101,3 +101,245 @@
 	width: 12.5em;
 	visibility: hidden;
 }
+
+
+
+/*doc
+
+## Формы
+
+Универсальная разметка для форм. Группы полей `Form__set` могут выделяться модификаторами `accent` (серый фон), `accent main` (жёлтый).
+
+Чтобы поле ввода заполняло всё доcтупное пространство, не влияя на подпись, нужен модификатор `w-full` у `Form__field`.
+
+Чтобы поле ввода заполняло всё пространство, подплывая под подпись, нужен модификатор `inputFull` у `Form__field`.
+
+У контейнера для 
+
+<form action="" class="Form">
+  <fieldset class="Form__set accent main">
+    <h4 class="Form__header">Общие сведения</h4>
+    <div class="Form__field">
+      <span class="Form__title"><label class="Form__label" for="id2">Имя:</label></span><div class="Form__group">
+        <div class="Form__field">
+          <input type="text" class="Form__input" id="id2" size="40" /><span class="icon remove"></span>
+        </div>
+        <div class="Form__field">
+          <input type="text" class="Form__input" id="id5" size="40" /><span class="icon remove"></span>
+        </div>
+        <div class="Form__field">
+          <span class="pseudoLink add">Добавить</span>
+        </div>
+      </div>
+    </div>
+    <div class="Form__field">
+      <span class="Form__title"><label class="Form__label" for="id4">Фамилия:</label></span><input type="text" class="Form__input" id="id4" size="40" />
+    </div>
+    <hr class="Form__divider" />
+    <div class="Form__field w-full">
+      <span class="Form__title"><label class="Form__label" for="id1">Длинная подпись для поля, чтобы аж скрылась:</label></span><input type="text" class="Form__input" id="id1" size="40" />
+    </div>
+  </fieldset>
+
+  <fieldset class="Form__set accent">
+    <h4 class="Form__header">Общие сведения</h4>
+    <div class="Form__field inputFull">
+      <span class="Form__title"><label class="Form__label" for="id3">Комментарий:</label></span><textarea class="Form__input" name="" id="id3" cols="30" rows="10"></textarea>
+    </div>
+  </fieldset>
+
+  <fieldset class="Form__set">
+    <button class="but green">Сохранить документ</button>
+  </fieldset>
+</form>
+
+
+<script>
+$(document).ready(function () {
+
+// псевдонаведение для связанных полей ввода
+$('.Form__label').hover(
+  function () {
+    if ($(this).attr('for')) {
+      $('#'+ $(this).attr('for')).addClass('hover');
+    }
+  },
+  function () {
+    if ($(this).attr('for')) {
+      $('#'+ $(this).attr('for')).removeClass('hover');
+    }
+  }
+)
+
+// добавление новой строки
+$('.Form .pseudoLink.add').click(function () {
+  $(this).parent('.Form__field').before('<div class="Form__field"><input type="text" class="Form__input" size="40" /><span class="icon remove"></span></div>')
+})
+
+// удаление строки
+$('.Form__group .icon.remove').live('click', function () {
+  $(this).parent('.Form__field').remove();
+})
+
+})
+</script>
+*/
+
+.Form {
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  line-height: 1.2;
+}
+
+.Form__set {
+  border: 0;
+  margin-top: 1em;
+  padding: 0;
+}
+.Form__set:first-child {
+  margin-top: 0;
+}
+
+.Form__header {
+  border-bottom: 1px solid rgba(0,0,0,.15);
+  font-size: inherit;
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  padding-bottom: .75em;
+}
+
+.Form__field {
+  min-height: 1.4em;
+  margin-top: 1em;
+  margin-left: 230px;
+  position: relative;
+}
+.Form__field:first-child {
+  margin-top: 0;
+}
+.Form__field .Form__field {
+  margin-left: 0;
+}
+
+.Form__divider {
+  background-color: rgba(0,0,0,.15);
+  -moz-box-sizing: content-box;
+       box-sizing: content-box;
+  border: 0;
+  height: 1px;
+  margin-top: 1em;
+}
+
+.Form__label {
+  cursor: pointer;
+  padding-top: .05em;
+  padding-bottom: .05em;
+}
+
+.Form__title {
+  color: rgba(0,0,0,.75);
+  display: inline-block;
+  margin-right: .5em;
+  margin-left: -230px;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: right;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  width: 220px;
+  
+  height: 1em;
+  white-space: nowrap;
+}
+.Form__title:hover {
+  overflow: visible;
+  white-space: normal;
+}
+
+.Form__input {
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  font: inherit;
+  margin: 0;
+  padding: 4px;
+  max-width: 100%;
+}
+.Form__input:hover,
+.Form__input.hover,
+.Form__input:focus {
+  border-color: #b9b9b9;
+}
+select.Form__input {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+textarea.Form__input {
+  resize: vertical;
+}
+.Form__input + .Form__input {
+  vertical-align: top;
+}
+.Form__input.w-300 {
+  width: 300px;
+}
+
+.Form__group {
+  display: inline-block;
+  margin-bottom: .75em;
+  width: 100%;
+}
+
+.Form .pseudoLink.add {
+  border-bottom: 1px dashed;
+  cursor: pointer;
+  color: #7c7c7c;
+}
+.Form__field:first-child .pseudoLink.add {
+  position: relative;
+  top: 5px;
+}
+.Form .pseudoLink.add:hover {
+  color: #4c4c4c;
+}
+
+.Form__field .icon.remove {
+  cursor: pointer;
+  margin-left: .4em;
+}
+.Form__field .icon.remove:hover {
+  background-position: 0 -71px;
+}
+
+
+.Form__set.accent,
+.Form__set.accent .Form__label {
+  background-color: #f0f0f0;
+}
+.Form__set.accent {
+  padding: 15px;
+}
+
+.Form__set.accent.main,
+.Form__set.accent.main .Form__label {
+  background-color: #f4f0d2;
+}
+
+
+.Form__field.w-full .Form__input {
+  width: 100%;
+}
+
+.Form__field.inputFull {
+  display: block;
+  margin-left: 0;
+}
+.Form__field.inputFull .Form__title {
+  margin-bottom: .5em;
+  margin-left: 0;
+  position: static;
+  text-align: left;
+}
+.Form__field.inputFull .Form__input {
+  width: 100%;
+}

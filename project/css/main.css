@@ -1003,6 +1003,180 @@ ul:lang(ru) > li:before {
   visibility: hidden;
 }
 
+.Form {
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  line-height: 1.2;
+}
+
+.Form__set {
+  border: 0;
+  margin-top: 1em;
+  padding: 0;
+}
+
+.Form__set:first-child {
+  margin-top: 0;
+}
+
+.Form__header {
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  font-size: inherit;
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  padding-bottom: 0.75em;
+}
+
+.Form__field {
+  min-height: 1.4em;
+  margin-top: 1em;
+  margin-left: 230px;
+  position: relative;
+}
+
+.Form__field:first-child {
+  margin-top: 0;
+}
+
+.Form__field .Form__field {
+  margin-left: 0;
+}
+
+.Form__divider {
+  background-color: rgba(0,0,0,0.15);
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 0;
+  height: 1px;
+  margin-top: 1em;
+}
+
+.Form__label {
+  cursor: pointer;
+  padding-top: 0.05em;
+  padding-bottom: 0.05em;
+}
+
+.Form__title {
+  color: rgba(0,0,0,0.75);
+  display: inline-block;
+  margin-right: 0.5em;
+  margin-left: -230px;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: right;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  width: 220px;
+  height: 1em;
+  white-space: nowrap;
+}
+
+.Form__title:hover {
+  overflow: visible;
+  white-space: normal;
+}
+
+.Form__input {
+  border: 1px solid #d9d9d9;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font: inherit;
+  margin: 0;
+  padding: 4px;
+  max-width: 100%;
+}
+
+.Form__input:hover,
+.Form__input.hover,
+.Form__input:focus {
+  border-color: #b9b9b9;
+}
+
+select.Form__input {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+textarea.Form__input {
+  resize: vertical;
+}
+
+.Form__input + .Form__input {
+  vertical-align: top;
+}
+
+.Form__input.w-300 {
+  width: 300px;
+}
+
+.Form__group {
+  display: inline-block;
+  margin-bottom: 0.75em;
+  width: 100%;
+}
+
+.Form .pseudoLink.add {
+  border-bottom: 1px dashed;
+  cursor: pointer;
+  color: #7c7c7c;
+}
+
+.Form__field:first-child .pseudoLink.add {
+  position: relative;
+  top: 5px;
+}
+
+.Form .pseudoLink.add:hover {
+  color: #4c4c4c;
+}
+
+.Form__field .icon.remove {
+  cursor: pointer;
+  margin-left: 0.4em;
+}
+
+.Form__field .icon.remove:hover {
+  background-position: 0 -71px;
+}
+
+.Form__set.accent,
+.Form__set.accent .Form__label {
+  background-color: #f0f0f0;
+}
+
+.Form__set.accent {
+  padding: 15px;
+}
+
+.Form__set.accent.main,
+.Form__set.accent.main .Form__label {
+  background-color: #f4f0d2;
+}
+
+.Form__field.w-full .Form__input {
+  width: 100%;
+}
+
+.Form__field.inputFull {
+  display: block;
+  margin-left: 0;
+}
+
+.Form__field.inputFull .Form__title {
+  margin-bottom: 0.5em;
+  margin-left: 0;
+  position: static;
+  text-align: left;
+}
+
+.Form__field.inputFull .Form__input {
+  width: 100%;
+}
+
 .Breadcrumbs {
   cursor: default;
   line-height: 1;
