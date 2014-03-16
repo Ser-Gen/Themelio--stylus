@@ -582,13 +582,10 @@ img[align="right"],
 }
 
 .textHide {
-  overflow: hidden;
-}
-
-.textHide:before {
-  content: "";
-  display: block;
-  height: 150%;
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
 }
 
 .ielte7 .textHide {
