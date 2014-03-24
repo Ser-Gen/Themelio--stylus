@@ -9,16 +9,18 @@
 ---------------------------------------------------------------------*/
 
 /* предотвращает схлопывание элемента, если в нём есть плавающие */
-.group:before,
-.group:after {
-	content: " ";
-	display: table;
-}
-.group:after {
-	clear: both;
-}
-.ielte7 .group {
-	zoom: 1;
+.group {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+	.ielte7 & {
+		zoom: 1;
+	}
 }
 
 /* альтернативный способ */
@@ -26,10 +28,11 @@
 	box-sizing: border-box;
 	display: inline-block;
 	width: 100%;
-}
-.ielte7 .groupIB {
-	display: inline;
-	zoom: 1;
+	
+	.ielte7 & {
+		display: inline;
+		zoom: 1;
+	}
 }
 
 
@@ -87,9 +90,11 @@ img[align="right"],
 </button>
 */
 
-.imgPreload:after {
-	content: '';
-	display: inline;
+.imgPreload {
+	&:after {
+		content: '';
+		display: inline;
+	}
 }
 .imgPreloadLoading:after,
 .Btn.loading .Icon {
@@ -107,13 +112,14 @@ img[align="right"],
 	content: '*';
 	font-weight: bold;
 	margin-left: .3em;
-}
-.ielte7 .fieldRequired {
-	background-color: #fdd;
-	display: inline;
-	min-height: 1em;
-	min-width: 1em;
-	zoom: 1;
+	
+	.ielte7 & {
+		background-color: #fdd;
+		display: inline;
+		min-height: 1em;
+		min-width: 1em;
+		zoom: 1;
+	}
 }
 
 
@@ -121,10 +127,11 @@ img[align="right"],
 .isNeedsJS {
 	opacity: 0;
 	visibility: hidden;
-}
-.has-js .isNeedsJS {
-	opacity: 1;
-	visibility: visible;
+	
+	.has-js & {
+		opacity: 1;
+		visibility: visible;
+	}
 }
 
 
@@ -134,9 +141,10 @@ img[align="right"],
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
-}
-.ielte7 .textHide {
-	text-indent: -9999px; /* проблема: строчно-блоковые элементы улетают */
+  
+  .ielte7 & {
+		text-indent: -9999px; /* проблема: строчно-блоковые элементы улетают */
+	}
 }
 
 .textHideAway {
@@ -147,8 +155,9 @@ img[align="right"],
 /* невыделяемый текст */
 .noUserSelect {
 	user-select: none;
+	
+	&::selection { color: inherit }
 }
-.noUserSelect::selection { color: inherit }
 
 /* отключение всплытия информации о ссылке при долгом нажатии на ней, http://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#/apple_ref/css/property/-webkit-touch-callout */
 .noTouchCallout {
@@ -215,25 +224,25 @@ http://www.mobify.com/blog/multiline-ellipsis-in-pure-css/
 	height: lineHeight * 4;
 	line-height: lineHeight;
 	overflow: hidden;
+	
+	&:before {
+		content: "";
+		float: left;
+		height: lineHeight * 4;
+		width: 5px;
+	}
+	&:after {
+		box-sizing: content-box;
+		content: "\02026";  
+		float: right; position: relative;
+		left: 100%;
+		margin-left: -1em;
+		padding-right: 5px;
+		text-align: right;
+		top: -(lineHeight);
+		width: 1em;
+	}
 }
-.Ellipsify:before {
-	content: "";
-	float: left;
-	height: lineHeight * 4;
-	width: 5px;
-}
-.Ellipsify:after {
-	box-sizing: content-box;
-	content: "\02026";  
-	float: right; position: relative;
-	left: 100%;
-	margin-left: -1em;
-	padding-right: 5px;
-	text-align: right;
-	top: -(lineHeight);
-	width: 1em;
-}
-
 .Ellipsify__text {
 	float: right;
 	margin-left: -5px;

@@ -563,7 +563,7 @@ img[align="right"],
   margin-left: 0.3em;
 }
 
-.ielte7 .fieldRequired {
+.ielte7 .fieldRequired:after {
   background-color: #fdd;
   display: inline;
   min-height: 1em;
@@ -605,11 +605,13 @@ img[align="right"],
   user-select: none;
 }
 
-.noUserSelect::-moz-selection {
+.noUserSelect::-moz-selection,
+.Tab::-moz-selection {
   color: inherit;
 }
 
-.noUserSelect::selection {
+.noUserSelect::selection,
+.Tab::selection {
   color: inherit;
 }
 
@@ -764,8 +766,7 @@ a:hover,
   cursor: pointer;
 }
 
-.Btn,
-.Btn--default {
+.Btn {
   border: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -780,18 +781,15 @@ a:hover,
   user-select: none;
 }
 
-.Btn:hover,
-.Btn--default:hover {
+.Btn:hover {
   text-decoration: none;
 }
 
-.Btn.big,
-.Btn--default.big {
+.Btn.big {
   font-size: 1.25em;
 }
 
-.Btn.small,
-.Btn--default.small {
+.Btn.small {
   font-size: 0.75em;
 }
 
@@ -1171,6 +1169,25 @@ textarea.Form__input {
 }
 
 .Form__field.inputFull .Form__input {
+  width: 100%;
+}
+
+.Form__field.error .Form__title,
+.Form__title.error {
+  color: #e70202;
+}
+
+.Form__field.error .Form__input,
+.Form__input.error {
+  border-color: #e70202;
+}
+
+.Form__error {
+  color: #e70202;
+  display: block;
+  font-size: 0.86em;
+  left: 0;
+  margin-top: 5px;
   width: 100%;
 }
 
@@ -2263,6 +2280,10 @@ a.BadgeOutline {
 
 .cl-b {
   clear: both;
+}
+
+.w-0 {
+  width: 0;
 }
 
 .w-full {
